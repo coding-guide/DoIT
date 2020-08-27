@@ -13,8 +13,8 @@ public class MyDate {
 	}
 
 	public void setYear(int year) {
-		if (year >= 1900 || year <= 2200) {
-			this.year = year;
+		this.year = year;
+		if (year >= 1900 && year <= 9999) {
 			isValid = true;
 		} else {
 			isValid = false;
@@ -26,8 +26,8 @@ public class MyDate {
 	}
 
 	public void setMonth(int month) {
-		if (month >= 1 || month <= 12) {
-			this.month = month;
+		this.month = month;
+		if (month >= 1 && month <= 12) {
 			isValid = true;
 		} else {
 			isValid = false;
@@ -41,6 +41,7 @@ public class MyDate {
 
 	public void setDay(int day) {
 		// 메서드안에 month를 선언하지 않았으므로 인스턴스변수인 month를 의미함
+		this.day = day;
 		switch (month) {
 		case 1:
 		case 3:
@@ -49,18 +50,34 @@ public class MyDate {
 		case 8:
 		case 10:
 		case 12:
-			this.day = 31;
-			isValid = true;
+			if(day>1 && day<=31) {
+				isValid = true;
+			}else {
+				isValid = false;
+			}
 			break;
 		case 2:
-			this.day = 28;
+			if(day>1 && day<=28) {
+				isValid = true;
+			}else {
+				isValid = false;
+			}
 			break;
 		default:
-			this.day = 30;
+			if(day>1 && day<=30) {
+				isValid = true;
+			}else {
+				isValid = false;
+			}
 		}
 	}// setDay
 
 	public MyDate() {
+		Calendar cal = Calendar.getInstance();
+		year = cal.get(Calendar.YEAR);
+		month = cal.get(Calendar.MONTH)+1;
+		day = cal.get(Calendar.DATE);
+		isValid = true;
 
 	}// 디폴트생성자
 
@@ -70,20 +87,20 @@ public class MyDate {
 		setYear(year);
 	}// 생성자 오버로드
 
-	public String isValidate() {
+	public void isValidate() {
 		if (isValid) {
-			return "유효한 날짜입니다";
+			System.out.println("유효한 날짜입니다");
 		} else {
-			return "유효하지 않은 날짜입니다";
+			System.out.println("유효하지 않은 날짜입니다");
 		}
 	}
 
 	@Override
 	public String toString() {
 		if (isValid) {
-			return "MyDate [year=" + year + ", month=" + month + ", day=" + day + "]";
+			return "MyDate [" + year + "년 " + month + "월 " + day + "일]";
 		} else {
-			return "유효하지 않은 날짜입니다.";
+			return "MyDate [" + year + "년 " + month + "월 " + day + "일]"+"로 유효하지 않은 날짜입니다.";
 		}
 
 	}
