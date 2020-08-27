@@ -50,23 +50,23 @@ public class MyDate {
 		case 8:
 		case 10:
 		case 12:
-			if(day>1 && day<=31) {
+			if (day > 1 && day <= 31) {
 				isValid = true;
-			}else {
+			} else {
 				isValid = false;
 			}
 			break;
 		case 2:
-			if(day>1 && day<=28) {
+			if (day > 1 && day <= 28) {
 				isValid = true;
-			}else {
+			} else {
 				isValid = false;
 			}
 			break;
 		default:
-			if(day>1 && day<=30) {
+			if (day > 1 && day <= 30) {
 				isValid = true;
-			}else {
+			} else {
 				isValid = false;
 			}
 		}
@@ -75,7 +75,7 @@ public class MyDate {
 	public MyDate() {
 		Calendar cal = Calendar.getInstance();
 		year = cal.get(Calendar.YEAR);
-		month = cal.get(Calendar.MONTH)+1;
+		month = cal.get(Calendar.MONTH) + 1;
 		day = cal.get(Calendar.DATE);
 		isValid = true;
 
@@ -100,7 +100,7 @@ public class MyDate {
 		if (isValid) {
 			return "MyDate [" + year + "년 " + month + "월 " + day + "일]";
 		} else {
-			return "MyDate [" + year + "년 " + month + "월 " + day + "일]"+"로 유효하지 않은 날짜입니다.";
+			return "MyDate [" + year + "년 " + month + "월 " + day + "일]" + "로 유효하지 않은 날짜입니다.";
 		}
 
 	}
