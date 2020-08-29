@@ -5,9 +5,9 @@ public class Employees {
 //	외부에서 고유번호를 수정할 수 없도록 private제한
 	private static int serialNumber = 1001;
 	
-	public int employeeId;
-	public String employeeName;
-	public String employeePhoneNumber;
+	private int employeeId;
+	private String employeeName;
+	private String employeePhoneNumber;
 	
 	public Employees(String employeeName,String employeePhoneNumber) {
 		employeeId = serialNumber++;
