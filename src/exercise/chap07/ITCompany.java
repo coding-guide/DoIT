@@ -1,7 +1,7 @@
 package exercise.chap07;
 
 public class ITCompany {
-//	사원번호를 부여하기 위한 static 변수
+//	ITCompany instance생성
 	private static ITCompany instance = new ITCompany();
 
 	private ITCompany() {
@@ -13,7 +13,7 @@ public class ITCompany {
 			instance = new ITCompany();
 		}
 		return instance;
-	}
+	}//인스턴스를 생성해서 넘겨주는 메서드
 
 	@Override
 	public String toString() {
