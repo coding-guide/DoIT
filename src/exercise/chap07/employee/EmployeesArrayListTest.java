@@ -1,4 +1,4 @@
-package exercise.chap07;
+package exercise.chap07.employee;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package exercise.chap07;
+package exercise.chap07.employee;
 
 public class EmployeesTest {
 

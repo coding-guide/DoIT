@@ -1,4 +1,4 @@
-package exercise.chap07;
+package exercise.chap07.employee;
 
 public class Employees {
 //	생성되는 사원인스턴스에 고유번호를 부여하기위한 static int serialNumber

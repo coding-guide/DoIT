@@ -1,4 +1,4 @@
-package exercise.chap07;
+package exercise.chap07.itcompany;
 
 public class ITCompanyTest {
 
