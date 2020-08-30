@@ -15,6 +15,11 @@ public class Employees {
 		this.employeePhoneNumber = employeePhoneNumber;
 	}//constructor
 	
+	
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
 	@Override
 	public String toString() {
 		return " [사원번호=" + employeeId + ", 이름=" + employeeName + ", 전화번호="

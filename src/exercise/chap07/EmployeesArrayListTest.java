@@ -1,27 +1,56 @@
 package exercise.chap07;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class EmployeesArrayListTest {
 
 	public static void main(String[] args) {
-		ArrayList<Employees> list = new ArrayList<Employees>();
-		list.add(new Employees("권용준","010-3312-3312"));
-		list.add(new Employees("김재현","010-9914-9914"));
-		list.add(new Employees("김준성","010-5801-5801"));
-		list.add(new Employees("박건호","010-9557-9557"));
-		list.add(new Employees("박성윤","010-7193-7193"));
-		list.add(new Employees("강동현","010-9533-9533"));
-		list.add(new Employees("강응찬","010-2921-2921"));
-		list.add(new Employees("김석현","010-2338-2338"));
-		list.add(new Employees("김우혁","010-5318-5318"));
-		list.add(new Employees("김윤호","010-3086-3086"));
+		EmployeesList list = EmployeesList.getInstance();
 		
-		System.out.println(" --------------ITCompany 사원정보 -------------");
-		for (Employees employees : list) {
-			System.out.println(employees);
-		}
+		list.enrolledEmployees();//기존사원 등록
 		
-	}
-
+		list.displayMenu(); //메뉴 선택
+		
+		Scanner in = new Scanner(System.in);
+		int menu = in.nextInt();
+		while(menu >=1 && menu <=3) {
+			
+			switch(menu) {
+//			사원정보표시
+			case 1:
+				list.showEmployees();
+				break;
+				
+//			신규사원등록
+			case 2:
+				System.out.println("이름을 입력하세요>>>");
+				String name = in.next();
+				System.out.println("전화번호를 입력하세요>>>");
+				String phoneNumber = in.next();
+				list.addEmployees(new Employees(name,phoneNumber));
+				break;
+				
+//			사원삭제
+			case 3:
+				System.out.println("삭제할 사원 아이디를 입력하세요>>>");
+				int id = in.nextInt();
+				if(!list.removeEmployees(id)) {
+					System.out.println("사원을 삭제하지 못하였습니다.");
+				}
+				break;
+				
+			default:
+		
+			}
+			
+			list.displayMenu(); //메뉴 선택
+			menu = in.nextInt();
+			
+		}//while
+		
+		System.out.println("----시스템이 종료되었습니다.----");
+		
+	}//main()
+	
 }
