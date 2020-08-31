@@ -1,4 +1,4 @@
-package exercise.chap05;
+package exercise.chap05.mydate;
 
 public class MyDateTest {
 

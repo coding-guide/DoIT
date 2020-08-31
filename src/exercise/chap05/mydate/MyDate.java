@@ -1,10 +1,10 @@
-package exercise.chap05;
+package exercise.chap05.mydate;
 
 import java.util.Calendar;
 
 public class MyDate {
-	// year, month, dayëŠ” ì¸ìŠ¤í„´ìŠ¤ë³€ìˆ˜(==ë©¤ë²„ë³€ìˆ˜)ì´ë‹¤.
-	// ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ëŠ” ì´ˆê¸°í™”ë¥¼ í•´ì£¼ì§€ ì•Šìœ¼ë©´ ê¸°ë³¸ê°’ìœ¼ë¡œ ì´ˆê¸°í™” ëœë‹¤. intí˜•ì€ 0, booleaní˜•ì€ false
+	// year, month, day?Š” ?¸?Š¤?„´?Š¤ë³??ˆ˜(==ë©¤ë²„ë³??ˆ˜)?´?‹¤.
+	// ?¸?Š¤?„´?Š¤ ë³??ˆ˜?Š” ì´ˆê¸°?™”ë¥? ?•´ì£¼ì? ?•Š?œ¼ë©? ê¸°ë³¸ê°’ìœ¼ë¡? ì´ˆê¸°?™” ?œ?‹¤. int?˜•?? 0, boolean?˜•?? false
 	private int year, month, day;
 	boolean isValid;
 
@@ -40,7 +40,7 @@ public class MyDate {
 	}
 
 	public void setDay(int day) {
-		// ë©”ì„œë“œì•ˆì— monthë¥¼ ì„ ì–¸í•˜ì§€ ì•Šì•˜ìœ¼ë¯€ë¡œ ì¸ìŠ¤í„´ìŠ¤ë³€ìˆ˜ì¸ monthë¥¼ ì˜ë¯¸í•¨
+		// ë©”ì„œ?“œ?•ˆ?— monthë¥? ?„ ?–¸?•˜ì§? ?•Š?•˜?œ¼ë¯?ë¡? ?¸?Š¤?„´?Š¤ë³??ˆ˜?¸ monthë¥? ?˜ë¯¸í•¨
 		this.day = day;
 		switch (month) {
 		case 1:
@@ -79,28 +79,28 @@ public class MyDate {
 		day = cal.get(Calendar.DATE);
 		isValid = true;
 
-	}// ë””í´íŠ¸ìƒì„±ì
+	}// ?””?´?Š¸?ƒ?„±?
 
 	public MyDate(int day, int month, int year) {
 		setDay(day);
 		setMonth(month);
 		setYear(year);
-	}// ìƒì„±ì ì˜¤ë²„ë¡œë“œ
+	}// ?ƒ?„±? ?˜¤ë²„ë¡œ?“œ
 
 	public void isValidate() {
 		if (isValid) {
-			System.out.println("ìœ íš¨í•œ ë‚ ì§œì…ë‹ˆë‹¤");
+			System.out.println("?œ ?š¨?•œ ?‚ ì§œì…?‹ˆ?‹¤");
 		} else {
-			System.out.println("ìœ íš¨í•˜ì§€ ì•Šì€ ë‚ ì§œì…ë‹ˆë‹¤");
+			System.out.println("?œ ?š¨?•˜ì§? ?•Š?? ?‚ ì§œì…?‹ˆ?‹¤");
 		}
 	}
 
 	@Override
 	public String toString() {
 		if (isValid) {
-			return "MyDate [" + year + "ë…„ " + month + "ì›” " + day + "ì¼]";
+			return "MyDate [" + year + "?…„ " + month + "?›” " + day + "?¼]";
 		} else {
-			return "MyDate [" + year + "ë…„ " + month + "ì›” " + day + "ì¼]" + "ë¡œ ìœ íš¨í•˜ì§€ ì•Šì€ ë‚ ì§œì…ë‹ˆë‹¤.";
+			return "MyDate [" + year + "?…„ " + month + "?›” " + day + "?¼]" + "ë¡? ?œ ?š¨?•˜ì§? ?•Š?? ?‚ ì§œì…?‹ˆ?‹¤.";
 		}
 
 	}
