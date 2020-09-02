@@ -9,7 +9,7 @@ public class Customer {
 	protected String customerName;
 	protected String customerGrade; 
 	protected int pricePaid; //지불한 가격
-	protected int accumulatePrice;
+	protected int accumulatePrice;//지불한 금액의 누적
 	protected int bonusPoint; // 보너스 포인트
 	protected double bonusRatio; // 보너스 적립 비율
 

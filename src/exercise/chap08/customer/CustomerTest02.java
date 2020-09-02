@@ -24,7 +24,10 @@ public class CustomerTest02 {
 //		따라서 인스턴스별 클래스타입에 맞는 toString메서드가 호출되어 실행한다.
 		for (Customer customer : list) {
 //			customer가 어떤 클래스타입인지에 따라 해당클래스의 toString이 호출되는것=> 다형성
-			System.out.println(customer);
+//			if(customer instanceof VIPCustomer) { //VIP고객만 출력하기 위해 customer인스턴스가 VIP인지 확인
+				System.out.println(customer);
+//			}
+			
 		}
 	}
 
