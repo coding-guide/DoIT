@@ -3,8 +3,8 @@ package exercise.chap05.mydate;
 import java.util.Calendar;
 
 public class MyDate {
-	// year, month, day?Š” ?¸?Š¤?„´?Š¤ë³??ˆ˜(==ë©¤ë²„ë³??ˆ˜)?´?‹¤.
-	// ?¸?Š¤?„´?Š¤ ë³??ˆ˜?Š” ì´ˆê¸°?™”ë¥? ?•´ì£¼ì? ?•Š?œ¼ë©? ê¸°ë³¸ê°’ìœ¼ë¡? ì´ˆê¸°?™” ?œ?‹¤. int?˜•?? 0, boolean?˜•?? false
+	// year, month, dayëŠ” ì¸ìŠ¤í„´ìŠ¤ë³€ìˆ˜(==ë©¤ë²„ë³€ìˆ˜)ì´ë‹¤.
+	// ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ëŠ” ì´ˆê¸°í™”ë¥¼ í•´ì£¼ì§€ ì•Šìœ¼ë©´ ê¸°ë³¸ê°’ìœ¼ë¡œ ì´ˆê¸°í™” ëœë‹¤. intí˜•ì€ 0, booleaní˜•ì€ false
 	private int year, month, day;
 	boolean isValid;
 
@@ -40,16 +40,10 @@ public class MyDate {
 	}
 
 	public void setDay(int day) {
-		// ë©”ì„œ?“œ?•ˆ?— monthë¥? ?„ ?–¸?•˜ì§? ?•Š?•˜?œ¼ë¯?ë¡? ?¸?Š¤?„´?Š¤ë³??ˆ˜?¸ monthë¥? ?˜ë¯¸í•¨
+		// ë©”ì„œë“œì•ˆì— monthë¥¼ ì„ ì–¸í•˜ì§€ ì•Šì•˜ìœ¼ë¯€ë¡œ ì¸ìŠ¤í„´ìŠ¤ë³€ìˆ˜ì¸ monthë¥¼ ì˜ë¯¸í•¨
 		this.day = day;
 		switch (month) {
-		case 1:
-		case 3:
-		case 5:
-		case 7:
-		case 8:
-		case 10:
-		case 12:
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
 			if (day > 1 && day <= 31) {
 				isValid = true;
 			} else {
@@ -79,28 +73,28 @@ public class MyDate {
 		day = cal.get(Calendar.DATE);
 		isValid = true;
 
-	}// ?””?´?Š¸?ƒ?„±?
+	}// ë””í´íŠ¸ìƒì„±ì
 
 	public MyDate(int day, int month, int year) {
 		setDay(day);
 		setMonth(month);
 		setYear(year);
-	}// ?ƒ?„±? ?˜¤ë²„ë¡œ?“œ
+	}// ìƒì„±ì ì˜¤ë²„ë¡œë“œ
 
 	public void isValidate() {
 		if (isValid) {
-			System.out.println("?œ ?š¨?•œ ?‚ ì§œì…?‹ˆ?‹¤");
+			System.out.println("ìœ íš¨í•œ ë‚ ì§œì…ë‹ˆë‹¤");
 		} else {
-			System.out.println("?œ ?š¨?•˜ì§? ?•Š?? ?‚ ì§œì…?‹ˆ?‹¤");
+			System.out.println("ìœ íš¨í•˜ì§€ ì•Šì€ ë‚ ì§œì…ë‹ˆë‹¤");
 		}
 	}
 
 	@Override
 	public String toString() {
 		if (isValid) {
-			return "MyDate [" + year + "?…„ " + month + "?›” " + day + "?¼]";
+			return "MyDate [" + year + "ë…„ " + month + "ì›” " + day + "ì¼]";
 		} else {
-			return "MyDate [" + year + "?…„ " + month + "?›” " + day + "?¼]" + "ë¡? ?œ ?š¨?•˜ì§? ?•Š?? ?‚ ì§œì…?‹ˆ?‹¤.";
+			return "MyDate [" + year + "ë…„ " + month + "ì›” " + day + "ì¼]" + "ë¡œ ìœ íš¨í•˜ì§€ ì•Šì€ ë‚ ì§œì…ë‹ˆë‹¤.";
 		}
 
 	}

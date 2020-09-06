@@ -1,7 +1,7 @@
 package exercise.chap06.card;
 
 public class OneCard {
-	final String cardName="One Card";
+	final String CARDNAME="One Card";
 	int cardId;
 	String userName;
 	
@@ -14,7 +14,7 @@ public class OneCard {
 
 	@Override
 	public String toString() {
-		return "OneCard [cardName=" + cardName + ", cardId=" + cardId + ", userName=" + userName + "]";
+		return "OneCard [cardName=" + CARDNAME + ", cardId=" + cardId + ", userName=" + userName + "]";
 	}
 	
 }

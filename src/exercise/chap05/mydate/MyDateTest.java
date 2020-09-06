@@ -9,8 +9,9 @@ public class MyDateTest {
 		System.out.println(date2);
 		date2.setDay(50);
 		date2.isValidate();
-		date2.setMonth(30);
-		date2.setYear(22020);
+		date2.setMonth(3);
+		date2.setYear(2020);
+		date2.setDay(30);
 		System.out.println(date2);
 	}
 
