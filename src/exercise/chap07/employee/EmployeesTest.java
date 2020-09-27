@@ -16,10 +16,13 @@ public class EmployeesTest {
 		employeesList[9] = new Employees("김윤호","010-3086-3086");
 		
 		System.out.println(" --------------ITCompany 사원정보 -------------");
-		int i = 0; 
-		while(employeesList[i] != null) {
-			System.out.println(employeesList[i++]);
+		for(int i = 0; i<employeesList.length;i++) {
+			if(employeesList[i]==null) continue;
+			System.out.println(employeesList[i]);
 		}
+//		while(employeesList[i] != null) {
+//			System.out.println(employeesList[i++]);
+//		}
 		
 	}
 
