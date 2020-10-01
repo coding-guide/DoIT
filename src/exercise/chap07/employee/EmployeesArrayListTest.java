@@ -1,6 +1,5 @@
 package exercise.chap07.employee;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeesArrayListTest {
@@ -10,11 +9,11 @@ public class EmployeesArrayListTest {
 		
 		list.enrolledEmployees();//기존사원 등록
 		
-		list.displayMenu(); //메뉴 선택
-		
 		Scanner in = new Scanner(System.in);
-		int menu = in.nextInt();
-		while(menu >=1 && menu <=3) {
+		
+		while(true) {
+			list.displayMenu(); //메뉴 선택
+			int menu = in.nextInt();
 			
 			switch(menu) {
 //			사원정보표시
@@ -39,17 +38,17 @@ public class EmployeesArrayListTest {
 					System.out.println("사원을 삭제하지 못하였습니다.");
 				}
 				break;
+			case 4:
+				System.out.println("시스템을 종료합니다.");
+				in.close();
+				System.exit(0);
 				
 			default:
+				System.out.println("잘못선택하셨습니다.");
 		
 			}
 			
-			list.displayMenu(); //메뉴 선택
-			menu = in.nextInt();
-			
 		}//while
-		
-		System.out.println("----시스템이 종료되었습니다.----");
 		
 	}//main()
 	

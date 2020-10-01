@@ -15,6 +15,7 @@ public class ThreeDPrinterTest03 {
 		ThreeDPrinterGeneric<Powder> printer2 = new ThreeDPrinterGeneric<>();
 		printer2.setMaterial(new Powder());
 		printer2.doPrinting();
+		
 
 	}
 

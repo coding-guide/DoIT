@@ -1,9 +1,9 @@
 package exercise.chap12.generic;
 
-public class Plastic{
+public class PlasticE  extends Material{
 	private String material;
 
-	public Plastic() {
+	public PlasticE() {
 		material = "Plastic";
 	}
 

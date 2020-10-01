@@ -1,10 +1,10 @@
 package exercise.chap12.generic;
 
-public class Plastic{
+public class PowderE extends Material{
 	private String material;
-
-	public Plastic() {
-		material = "Plastic";
+	
+	public PowderE() {
+		material = "Powder";
 	}
 
 	@Override
