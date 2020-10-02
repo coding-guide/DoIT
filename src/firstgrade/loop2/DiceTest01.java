@@ -15,14 +15,20 @@ public class DiceTest01 {
 			int valueOfDice = (int) (Math.random() * 6 + 1);
 			for (int i = 3; i >= 1; i--) {
 				System.out.println("주사위 눈값은?>>>");
-				int answerOfDice = in.nextInt();
-				if (valueOfDice == answerOfDice) {
-					jumsu += i * 10;
-					System.out.println("맞았습니다." + valueOfDice);
-					break;
-				} else {
-					System.out.println("틀렸습니다.");
+				try {
+					int answerOfDice = in.nextInt();
+					if (valueOfDice == answerOfDice) {
+						jumsu += i * 10;
+						System.out.println("맞았습니다." + valueOfDice);
+						break;
+					} else {
+						System.out.println("틀렸습니다.");
+					}
+				}catch (Exception e) {
+					System.out.println("잘못입력하셨습니다.");
+					System.exit(0);
 				}
+				
 			}
 			System.out.println(palyer + "님의 점수는 : " + jumsu);
 		}
